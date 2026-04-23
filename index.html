@@ -390,9 +390,9 @@
       .stage {
         position: relative;
         width: 100vw;
-        height: 100vh;
+        min-height: 100dvh;
         background: #000;
-        overflow: hidden;
+        overflow: hidden scroll;
       }
 
       .curtain-panel {
@@ -660,11 +660,18 @@
     </section>
 
     <!-- CURTAIN SECTION -->
-    <section id="curtain-page" class="page" style="padding: 0; overflow-y: auto">
+    <section
+      id="curtain-page"
+      class="page"
+      style="padding: 0; overflow: scroll; height: auto; min-height: 100dvh"
+    >
       <div class="stage" id="stage">
         <div class="curtain-panel curtain-left"></div>
         <div class="curtain-panel curtain-right"></div>
-        <div class="secret-content">
+        <div
+          class="secret-content"
+          style="overflow: scroll; height: auto; min-height: 100dvh"
+        >
           <div class="message-card" id="message-card">
             <h2
               style="
